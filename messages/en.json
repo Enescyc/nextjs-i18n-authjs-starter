@@ -1,0 +1,42 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "Auth": {
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "welcome": "Welcome back!",
+    "pleaseSignIn": "Please sign in to continue"
+  },
+  "Common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm"
+  },
+  "Home": {
+    "title": "Next.js i18n Auth Starter",
+    "subtitle": "Production-ready starter template",
+    "description": "A complete Next.js 15 starter with internationalization, authentication, role management, and modern UI components.",
+    "getStarted": "Get Started",
+    "viewDashboard": "View Dashboard",
+    "githubRepo": "GitHub Repository",
+    "features": "Features",
+    "techStack": "Tech Stack",
+    "i18nTitle": "Internationalization",
+    "i18nDesc": "Full i18n support with next-intl",
+    "authTitle": "Authentication",
+    "authDesc": "Google OAuth with NextAuth.js",
+    "uiTitle": "Modern UI",
+    "uiDesc": "shadcn/ui components with Tailwind CSS",
+    "typesafeTitle": "Type Safe",
+    "typesafeDesc": "Full TypeScript implementation",
+    "performanceTitle": "Performance",
+    "performanceDesc": "Next.js 15 with App Router",
+    "databaseTitle": "Database",
+    "databaseDesc": "Prisma ORM with role management"
+  }
+}

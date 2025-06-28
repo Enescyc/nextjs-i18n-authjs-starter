@@ -1,0 +1,42 @@
+{
+  "Navigation": {
+    "home": "Ana Sayfa",
+    "about": "Hakkında",
+    "contact": "İletişim"
+  },
+  "Auth": {
+    "signIn": "Giriş Yap",
+    "signOut": "Çıkış Yap",
+    "welcome": "Tekrar hoş geldiniz!",
+    "pleaseSignIn": "Devam etmek için lütfen giriş yapın"
+  },
+  "Common": {
+    "loading": "Yükleniyor...",
+    "error": "Bir hata oluştu",
+    "success": "Başarılı",
+    "cancel": "İptal",
+    "confirm": "Onayla"
+  },
+  "Home": {
+    "title": "Next.js i18n Auth Başlangıç",
+    "subtitle": "Üretime hazır başlangıç şablonu",
+    "description": "Uluslararasılaştırma, kimlik doğrulama, rol yönetimi ve modern UI bileşenleri ile eksiksiz Next.js 15 başlangıç şablonu.",
+    "getStarted": "Başlayın",
+    "viewDashboard": "Paneli Görüntüle",
+    "githubRepo": "GitHub Deposu",
+    "features": "Özellikler",
+    "techStack": "Teknoloji Yığını",
+    "i18nTitle": "Uluslararasılaştırma",
+    "i18nDesc": "next-intl ile tam i18n desteği",
+    "authTitle": "Kimlik Doğrulama",
+    "authDesc": "NextAuth.js ile Google OAuth",
+    "uiTitle": "Modern UI",
+    "uiDesc": "Tailwind CSS ile shadcn/ui bileşenleri",
+    "typesafeTitle": "Tip Güvenli",
+    "typesafeDesc": "Tam TypeScript uygulaması",
+    "performanceTitle": "Performans",
+    "performanceDesc": "App Router ile Next.js 15",
+    "databaseTitle": "Veritabanı",
+    "databaseDesc": "Rol yönetimi ile Prisma ORM"
+  }
+}
