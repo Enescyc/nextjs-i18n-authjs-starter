@@ -8,7 +8,9 @@
     "signIn": "Giriş Yap",
     "signOut": "Çıkış Yap",
     "welcome": "Tekrar hoş geldiniz!",
-    "pleaseSignIn": "Devam etmek için lütfen giriş yapın"
+    "pleaseSignIn": "Devam etmek için lütfen giriş yapın",
+    "dashboard": "Panel",
+    "admin": "Yönetici"
   },
   "Common": {
     "loading": "Yükleniyor...",
@@ -25,7 +27,17 @@
     "viewDashboard": "Paneli Görüntüle",
     "githubRepo": "GitHub Deposu",
     "features": "Özellikler",
+    "featuresDesc": "Modern, üretime hazır Next.js uygulaması oluşturmak için ihtiyacınız olan her şey.",
     "techStack": "Teknoloji Yığını",
+    "techStackDesc": "En son ve en iyi teknolojilerle inşa edilmiştir",
+    "ctaTitle": "Başlamaya hazır mısınız?",
+    "ctaDesc": "Bu depoyu klonlayın ve güvenle bir sonraki projenizi oluşturmaya başlayın.",
+    "viewGithub": "GitHub'da Görüntüle",
+    "documentation": "Dokümantasyon",
+    "issues": "Sorunlar",
+    "github": "GitHub",
+    "footerText": "Geliştirici topluluğu tarafından ❤️ ile oluşturulmuştur.",
+    "openSource": "Açık kaynak",
     "i18nTitle": "Uluslararasılaştırma",
     "i18nDesc": "next-intl ile tam i18n desteği",
     "authTitle": "Kimlik Doğrulama",
@@ -38,5 +50,28 @@
     "performanceDesc": "App Router ile Next.js 15",
     "databaseTitle": "Veritabanı",
     "databaseDesc": "Rol yönetimi ile Prisma ORM"
+  },
+  "Dashboard": {
+    "title": "Kullanıcı Paneli",
+    "welcome": "Hoş geldin, {name}",
+    "loggedInAs": "Şu anda {role} olarak giriş yapmışsınız.",
+    "adminAccess": "Yönetici Erişimi",
+    "adminPrivileges": "Yönetici ayrıcalıklarınız bulunuyor. Yönetici paneline erişebilirsiniz.",
+    "goToAdminPanel": "Yönetici Paneline Git"
+  },
+  "Admin": {
+    "title": "Yönetici Paneli",
+    "welcome": "Hoş geldin, {name}",
+    "adminAccessMessage": "Bu uygulamaya yönetici erişiminiz bulunuyor.",
+    "adminUsers": "Yönetici Kullanıcılar",
+    "adminRole": "Yönetici"
+  },
+  "Error": {
+    "authenticationError": "Kimlik Doğrulama Hatası",
+    "oauthAccountNotLinked": "Kimliğinizi doğrulamak için, başlangıçta kullandığınız hesapla giriş yapın.",
+    "accessDenied": "Erişim reddedildi. Lütfen bir yönetici ile iletişime geçin.",
+    "unexpectedError": "Kimlik doğrulama sırasında beklenmeyen bir hata oluştu.",
+    "tryAgain": "Tekrar Dene",
+    "goHome": "Ana Sayfaya Git"
   }
 }

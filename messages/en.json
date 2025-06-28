@@ -8,7 +8,9 @@
     "signIn": "Sign In",
     "signOut": "Sign Out",
     "welcome": "Welcome back!",
-    "pleaseSignIn": "Please sign in to continue"
+    "pleaseSignIn": "Please sign in to continue",
+    "dashboard": "Dashboard",
+    "admin": "Admin"
   },
   "Common": {
     "loading": "Loading...",
@@ -25,7 +27,17 @@
     "viewDashboard": "View Dashboard",
     "githubRepo": "GitHub Repository",
     "features": "Features",
+    "featuresDesc": "Everything you need to build a modern, production-ready Next.js application.",
     "techStack": "Tech Stack",
+    "techStackDesc": "Built with the latest and greatest technologies",
+    "ctaTitle": "Ready to get started?",
+    "ctaDesc": "Clone this repository and start building your next project with confidence.",
+    "viewGithub": "View on GitHub",
+    "documentation": "Documentation",
+    "issues": "Issues",
+    "github": "GitHub",
+    "footerText": "Built with ❤️ by the developer community.",
+    "openSource": "Open source",
     "i18nTitle": "Internationalization",
     "i18nDesc": "Full i18n support with next-intl",
     "authTitle": "Authentication",
@@ -38,5 +50,28 @@
     "performanceDesc": "Next.js 15 with App Router",
     "databaseTitle": "Database",
     "databaseDesc": "Prisma ORM with role management"
+  },
+  "Dashboard": {
+    "title": "User Dashboard",
+    "welcome": "Welcome, {name}",
+    "loggedInAs": "You are logged in as a {role}.",
+    "adminAccess": "Admin Access",
+    "adminPrivileges": "You have administrative privileges. You can access the admin panel.",
+    "goToAdminPanel": "Go to Admin Panel"
+  },
+  "Admin": {
+    "title": "Admin Dashboard", 
+    "welcome": "Welcome, {name}",
+    "adminAccessMessage": "You have admin access to this application.",
+    "adminUsers": "Admin Users",
+    "adminRole": "Admin"
+  },
+  "Error": {
+    "authenticationError": "Authentication Error",
+    "oauthAccountNotLinked": "To confirm your identity, sign in with the same account you used originally.",
+    "accessDenied": "Access was denied. Please contact an administrator.",
+    "unexpectedError": "An unexpected error occurred during authentication.",
+    "tryAgain": "Try Again",
+    "goHome": "Go Home"
   }
 }

@@ -1,4 +1,4 @@
-# 🌐 VocAgent - Multi-Language Auth.js with PostgreSQL + Prisma
+# 🌐 Next.js i18n Auth.js Starter
 
 A complete example implementation of **Auth.js (NextAuth.js)** with **multi-language support**, **role-based authentication**, and **PostgreSQL + Prisma** integration.
 
@@ -44,8 +44,8 @@ A complete example implementation of **Auth.js (NextAuth.js)** with **multi-lang
 ### 1. Clone and Install
 
 ```bash
-git clone <repository-url>
-cd vocagent
+git clone https://github.com/Enescyc/nextjs-i18n-authjs-starter.git
+cd nextjs-i18n-authjs-starter
 npm install
 ```
 
@@ -53,7 +53,7 @@ npm install
 
 ```bash
 # Start PostgreSQL and create database
-createdb vocagent
+createdb nextjs_i18n_authjs_starter
 
 # Generate Prisma client and push schema
 npx prisma generate
@@ -66,7 +66,7 @@ Create `.env.local`:
 
 ```env
 # Database
-DATABASE_URL="postgresql://username:password@localhost:5432/vocagent?schema=public"
+DATABASE_URL="postgresql://username:password@localhost:5432/nextjs_i18n_authjs_starter?schema=public"
 
 # NextAuth.js
 NEXTAUTH_URL="http://localhost:3000"
@@ -99,7 +99,7 @@ Visit `http://localhost:3000` and test authentication!
 ## 📁 Project Structure
 
 ```
-vocagent/
+nextjs-i18n-authjs-starter/
 ├── app/                          # Next.js App Router
 │   ├── [locale]/                 # Internationalized routes
 │   │   ├── admin/               # Admin-only pages

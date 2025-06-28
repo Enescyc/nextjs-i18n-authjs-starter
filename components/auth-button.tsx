@@ -37,11 +37,11 @@ export function AuthButton() {
         
         <div className="flex gap-2">
           <Button asChild variant="secondary" size="sm">
-            <Link href="/dashboard">Dashboard</Link>
+            <Link href="/dashboard">{t('dashboard')}</Link>
           </Button>
           {session.user.role === Role.ADMIN && (
             <Button asChild variant="default" size="sm">
-              <Link href="/admin">Admin</Link>
+              <Link href="/admin">{t('admin')}</Link>
             </Button>
           )}
           <Button 

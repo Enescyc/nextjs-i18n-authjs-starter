@@ -1,17 +1,24 @@
-import { getServerSession } from "next-auth"
-import { authOptions } from "@/lib/auth"
+import { auth } from "@/auth"
 import { redirect } from "next/navigation"
 import { Role } from "@prisma/client"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { getTranslations } from "next-intl/server"
+import { parseLocaleParams } from "@/lib/i18n/server"
 import Link from "next/link"
 
 export const dynamic = 'force-dynamic'
 
-export default async function DashboardPage() {
-  const session = await getServerSession(authOptions)
+export default async function DashboardPage({
+  params
+}: {
+  params: Promise<{locale: string}>;
+}) {
+  const locale = await parseLocaleParams(params);
+  const session = await auth()
+  const t = await getTranslations({locale, namespace: 'Dashboard'})
   
   if (!session) {
     redirect("/")
@@ -20,15 +27,15 @@ export default async function DashboardPage() {
   return (
     <div className="min-h-screen p-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold mb-8">User Dashboard</h1>
+        <h1 className="text-3xl font-bold mb-8">{t('title')}</h1>
         
         <Card className="mb-8">
           <CardHeader>
-            <CardTitle>Welcome, {session.user.name}</CardTitle>
+            <CardTitle>{t('welcome', { name: session.user.name || session.user.email || 'User' })}</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground mb-4">
-              You are logged in as a {session.user.role.toLowerCase()}.
+              {t('loggedInAs', { role: session.user.role.toLowerCase() })}
             </p>
             
             <div className="flex items-center space-x-3">
@@ -52,14 +59,14 @@ export default async function DashboardPage() {
         {session.user.role === Role.ADMIN && (
           <Card className="border-yellow-200 bg-yellow-50">
             <CardHeader>
-              <CardTitle className="text-yellow-800">Admin Access</CardTitle>
+              <CardTitle className="text-yellow-800">{t('adminAccess')}</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-yellow-700 mb-4">
-                You have administrative privileges. You can access the admin panel.
+                {t('adminPrivileges')}
               </p>
               <Button asChild variant="default">
-                <Link href="/admin">Go to Admin Panel</Link>
+                <Link href="/admin">{t('goToAdminPanel')}</Link>
               </Button>
             </CardContent>
           </Card>

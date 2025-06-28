@@ -1,15 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
-import { AuthButton } from "@/components/auth-button";
-import { LanguageSwitcher } from "@/components/language-switcher";
-import { useTranslations } from 'next-intl';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Globe, Shield, Palette, Code2, Zap, Database } from "lucide-react";
+import {AuthButton} from "@/components/auth-button";
+import {LanguageSwitcher} from "@/components/language-switcher";
 
-export default function Home() {
-  const t = useTranslations('Home');
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Code2, Database, Globe, Palette, Shield, Zap} from "lucide-react";
+import {getTranslations} from "next-intl/server";
+import {parseLocaleParams} from "@/lib/i18n/server";
+
+export default async function Home({
+  params
+}: {
+  params: Promise<{locale: string}>;
+}) {
+  const locale = await parseLocaleParams(params);
+  const t = await getTranslations({locale, namespace: 'Home'});
 
   const features = [
     {
@@ -46,7 +53,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-muted/20">
-      {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-14 max-w-screen-2xl items-center justify-between px-4">
           <div className="flex items-center gap-2">
@@ -89,7 +95,7 @@ export default function Home() {
             </Button>
             <Button size="lg" variant="outline" asChild>
               <a 
-                href="https://github.com/yourusername/nextjs-i18n-auth-starter" 
+                href="https://github.com/Enescyc/-nextjs-i18n-authjs-starter" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="gap-2"
@@ -108,7 +114,7 @@ export default function Home() {
               {t('features')}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Everything you need to build a modern, production-ready Next.js application.
+              {t('featuresDesc')}
             </p>
           </div>
           
@@ -137,7 +143,7 @@ export default function Home() {
             <CardHeader className="text-center">
               <CardTitle className="text-2xl">{t('techStack')}</CardTitle>
               <CardDescription>
-                Built with the latest and greatest technologies
+                {t('techStackDesc')}
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -170,9 +176,9 @@ export default function Home() {
         <section className="mx-auto mt-24 max-w-4xl text-center">
           <Card className="border-primary/20 bg-primary/5">
             <CardContent className="pt-6">
-              <h3 className="text-2xl font-bold mb-4">Ready to get started?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('ctaTitle')}</h3>
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                Clone this repository and start building your next project with confidence.
+                {t('ctaDesc')}
               </p>
               <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
                 <Button size="lg" asChild>
@@ -182,11 +188,11 @@ export default function Home() {
                 </Button>
                 <Button size="lg" variant="outline" asChild>
                   <a 
-                    href="https://github.com/yourusername/nextjs-i18n-auth-starter" 
+                    href="https://github.com/Enescyc/-nextjs-i18n-authjs-starter" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
-                    View on GitHub
+                    {t('viewGithub')}
                   </a>
                 </Button>
               </div>
@@ -218,34 +224,34 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Documentation
+                  {t('documentation')}
                 </a>
               </Button>
               <Button variant="ghost" size="sm" asChild>
                 <a
-                  href="https://github.com/yourusername/nextjs-i18n-auth-starter/issues"
+                  href="https://github.com/Enescyc/-nextjs-i18n-authjs-starter/issues"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Issues
+                  {t('issues')}
                 </a>
               </Button>
               <Button variant="ghost" size="sm" asChild>
                 <a
-                  href="https://github.com/yourusername/nextjs-i18n-auth-starter"
+                  href="https://github.com/Enescyc/-nextjs-i18n-authjs-starter"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  GitHub
+                  {t('github')}
                 </a>
               </Button>
             </div>
           </div>
           <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
             <p>
-              Built with ❤️ by the developer community. 
-              <a href="https://github.com/yourusername/nextjs-i18n-auth-starter" className="underline hover:text-foreground ml-1">
-                Open source
+              {t('footerText')}
+              <a href="https://github.com/Enescyc/-nextjs-i18n-authjs-starter" className="underline hover:text-foreground ml-1">
+                {t('openSource')}
               </a>
               .
             </p>
