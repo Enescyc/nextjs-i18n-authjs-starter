@@ -7,6 +7,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 
+export const dynamic = 'force-dynamic'
+
 export default async function AdminPage() {
   const session = await getServerSession(authOptions)
   
@@ -14,7 +16,12 @@ export default async function AdminPage() {
     redirect("/")
   }
 
-  const admins = await getAllAdmins()
+  let admins: Awaited<ReturnType<typeof getAllAdmins>> = []
+  try {
+    admins = await getAllAdmins()
+  } catch (error) {
+    console.error("Failed to load admins:", error)
+  }
 
   return (
     <div className="min-h-screen p-8">
